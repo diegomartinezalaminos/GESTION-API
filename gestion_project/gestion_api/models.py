@@ -52,6 +52,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
 
     object = UserProfileManage()
+    objects = models.Manager()
 
     # Los nombres tiene que ser así si no no funciona y no te pregunta los campos a la hora de crear el usuario
     USERNAME_FIELD = 'email'
